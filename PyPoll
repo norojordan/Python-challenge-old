@@ -12,7 +12,7 @@ with open(csvpath) as csvfile:
     # CSV reader specifies comma delimiter and variable that holds contents
     csvreader = csv.reader(csvfile, delimiter=',')
 
-    # Skip the two header rows first 
+    # Skip the header row first 
     next(csvreader)
     
 
