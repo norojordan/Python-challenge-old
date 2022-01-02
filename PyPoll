@@ -1,0 +1,53 @@
+# First import the modules
+import os
+import csv
+
+
+csvpath = os.path.join("../","Resources", "election_data.csv")
+
+
+# Read the csv module
+with open(csvpath) as csvfile:
+
+    # CSV reader specifies comma delimiter and variable that holds contents
+    csvreader = csv.reader(csvfile, delimiter=',')
+
+    # Skip the two header rows first 
+    next(csvreader)
+    
+
+    # Identify the necessary lists. 
+
+    total_votes = []
+    khan_votes = 0
+    correy_votes = 0
+    li_votes = 0
+    otooley_votes = 0
+    
+
+    # Read each row of data after the header and count the number of votes in the data
+    for row in csvreader:
+        total_votes.append(row[2])
+
+        if row[2] == 'Khan':
+            khan_votes = khan_votes + 1
+        elif row[2] =='Correy':
+            correy_votes = correy_votes + 1
+        elif row[2] =='Li':
+            li_votes = li_votes + 1
+        else: 
+            otooley_votes = otooley_votes + 1
+        
+
+
+    print("Election Results")
+    print("----------------------------")
+    print(f"Total Votes: {len(total_votes)}")
+    print("----------------------------")
+    print(f"Khan: {khan_votes}")
+    print(f"Correy {correy_votes}")
+    print(f"Li {li_votes}")
+    print(f"O'Tooley {otooley_votes}")
+    print("-----------------------------")
+    print("Winner:")
+    print("-----------------------------")
