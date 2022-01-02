@@ -15,7 +15,7 @@ with open(csvpath) as csvfile:
     # Skip the two header rows first 
     next(csvreader)
     next(csvreader)
-
+#
     # Identify the necessary lists. 
 
     months = []
@@ -37,15 +37,17 @@ with open(csvpath) as csvfile:
         profit_average = sum(profit_change)/len(profit_change)
 
     # Find the greatest increase in profits and the greatest decrease in profits. (Similar to the bonus from VBA HW)
-    # Print it out with the corresponding date.
-        if profit_change[i] < profit_change[i - 1]:
-            max_profit = profit_change[i - 1]
-            min_profit = profit_change[i] 
+    # Print it out with the corresponding date. Not sure how to do this.
+        
+        max_profit = max(profit_change)
+        min_profit = min(profit_change)
+        max_profit_month = str(months[total_profit.index(max(total_profit))])
+        min_profit_month = str(months[profit_change.index(min(profit_change))])
 
     # Print out the Financial Analysis for the data. Figure out how to print the date with the last two.
 
     print(f"Total Months:{len(months)}")
-    print(f"Total Profit: ${sum(total_profit)}")
+    print(f"Total Profit: ${sum(total_profit):.2f}")
     print(f"Average Change: ${profit_average:.2f}")
-    print(f"Greatest Increase in Profits:{max_profit}")
-    print(f"Greatest Decrease in Profit: {min_profit}")
+    print(f"Greatest Increase in Profits: {max_profit_month} ${max_profit:.2f}")
+    print(f"Greatest Decrease in Profits: {min_profit_month} ${min_profit:.2f}")
