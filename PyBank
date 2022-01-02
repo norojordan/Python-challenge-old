@@ -1,0 +1,46 @@
+# First import the modules
+import os
+import csv
+
+
+csvpath = os.path.join("../","Resources", "budget_data.csv")
+
+
+# Read the csv module
+with open(csvpath) as csvfile:
+
+    # CSV reader specifies delimiter and variable that holds contents
+    csvreader = csv.reader(csvfile, delimiter=',')
+
+    # Skip the two header rows first 
+    next(csvreader)
+    next(csvreader)
+
+    # Initialize the two columns. How do I name the columns?
+
+    months = 0
+    total_profit = 0
+
+    # Read each row of data after the header and count the number of months in the data
+    for row in csvreader:
+        months +=1
+        total_profit = total_profit + float(row[1])
+
+
+    print("Total Months:",(months))
+    print("Total Profit: $",total_profit)
+
+# Calculate the net total amount of profit/losses over the entire period
+# assign the profit/loss of Jan 2010 to "Total" and then addsubtract each profit/loss to keep a running tally
+
+
+
+
+# Calculate the changes in profit/losses over the entire period
+
+# Calculate the average of those changes
+
+
+# Calculate the greatest increase in profits, date and amount, over the entire period
+
+# Calculate the greatest decrease in profits, date and amount, over the entire period
