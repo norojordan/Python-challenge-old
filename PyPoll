@@ -59,7 +59,7 @@ elif li_votes > khan_votes and correy_votes and otooley_votes:
 elif otooley_votes > khan_votes and li_votes and correy_votes:
     winner = "O'Tooley"
 else:
-    print("A tie has occurred. We need a run-off election")
+    winner = "A tie has occurred. We need a run-off election."
 
 
 
