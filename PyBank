@@ -70,4 +70,4 @@ print(financial_analysis_output)
 
 # Export the results to a text file
 with open(file_to_output, "w") as txt_file:
-    txt_file.write("financial_analysis_output")
+    txt_file.write(financial_analysis_output)
