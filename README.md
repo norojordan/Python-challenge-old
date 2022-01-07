@@ -20,4 +20,4 @@ In the PyBank challenge, a set of finanacial data composed of two columns - date
   *Calculate the greatest decrease in profits and the corresponding date over the entire time.
 
 A .csv set of data will be imported and used in this program and can be found in the Resources folder.
-The analysis will print both to the terminal and be exported to a text file.
+The analysis will print both to the terminal and be exported to a text file that can be found in the Analysis folder.
