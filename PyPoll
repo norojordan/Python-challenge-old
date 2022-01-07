@@ -40,17 +40,15 @@ with open(csvpath) as csvfile:
         else: 
             otooley_votes = otooley_votes + 1
 
-    # Identify the winner. Put votes into a list and then use max. Didn't work. Have to index somehow. 
-    # For now I used if statement in the print but there has to be a better way!
+
+    # Calculate the percentage of votes for each candidate 
     
-       # vote_talley = [int(khan_votes),int(correy_votes),int(li_votes),int(otooley_votes)]
-        # max_vote_talley = max(vote_talley) 
-               
-    # Calculate the percentage of votes for each candidate   
     khan_vote_percent = (khan_votes)/len(total_votes) 
     correy_vote_percent = (correy_votes)/len(total_votes)
     li_vote_percent = (li_votes)/len(total_votes)
     otooley_vote_percent = (otooley_votes)/len(total_votes)
+    
+# Identify the winner by comparing votes.    
 
 if khan_votes > correy_votes and li_votes and otooley_votes:
     winner = "Khan"
