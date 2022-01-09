@@ -50,16 +50,16 @@ with open(csvpath) as csvfile:
     
 # Identify the winner by comparing votes.    
 
-if khan_votes > correy_votes and li_votes and otooley_votes:
+if (khan_votes > correy_votes and khan_votes > li_votes and khan_votes > otooley_votes):
     winner = "Khan"
-elif correy_votes > khan_votes and li_votes and otooley_votes:
+elif (correy_votes > li_votes and correy_votes > otooley_votes and correy_votes > khan_votes):
     winner = "Correy"
-elif li_votes > khan_votes and correy_votes and otooley_votes:
+elif (li_votes > khan_votes and li_votes > correy_votes and li_votes > otooley_votes):
     winner = "Li"
-elif otooley_votes > khan_votes and li_votes and correy_votes:
+elif (otooley_votes > khan_votes and otooley_votes > li_votes and otooley_votes > correy_votes):
     winner = "O'Tooley"
 else:
-    winner = "A tie has occurred. We need a run-off election."
+     winner = "A tie has occurred. We need a run-off election"
 
 
 
